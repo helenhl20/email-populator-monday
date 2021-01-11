@@ -25,7 +25,7 @@ $ nvm use
 $ npm install
 ```
 
-## Configure Monday App
+## Configure Your monday.com Custom App
 
 ### Create a new app and an integration feature
 
@@ -60,7 +60,7 @@ $ npm install
    <br> ![Screenshot](/images/custom_action_selections.png)
 6. Click "Create action"
 
-### Configure your custom action in the recipe
+### Configure Your Custom Action
 
 1. Choose your custom action in the recipe
 2. Type “transform to {Text column, targetColumnId}” in the "Sentence" field
