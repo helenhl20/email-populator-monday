@@ -1,6 +1,6 @@
 ## Overview
 
-This is Helen's "Quickstart Integration" example Monday app.
+This is Helen's "Quickstart Integration" example custom integration monday.com app.
 
 <br>It can be used as a board recipe, which inserts a user's email address into a Text column when said user is selected (or unselected) from a Person column. 
 
