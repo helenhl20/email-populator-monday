@@ -96,6 +96,9 @@ If you want to actively change the server-side code and restart the server (as w
 
 ### How This Custom Integration Works
 
-<br>The changes to this custom integration starter code file are in the "transformation.js" file, the "mondayservice.js" file, as well as the "integration-controller.js" files. 
+The changes to this custom integration starter code file are in the "integration_routes.js" file, the "monday-service.js" file, as well as the "integration-controller.js" files. Let's go through them one by one! 
 
+## Service File
+
+In the "mondayservice.js" file, 
 
