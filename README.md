@@ -100,9 +100,9 @@ The changes to this custom integration starter code file are in the "integration
 
 ### File Changes
 
-In the "monday-service.js" file, I added the new async function "getUserEmail." This function queries a user's email data based off of their user ID. Keep in mind, this async function only runs once, and is only able to retrieve the first user's email from the query. 
+1. In the "monday-service.js" file, I added the new async function "getUserEmail." This function queries a user's email data based off of their user ID. Keep in mind, this async function only runs once, and is only able to retrieve the first user's email from the query. 
 
-In the "integration-controller.js" file, I added the new async function "populateTextColumnFromPeopleColumn," and also inserted internal notes walking through each line of code that was implemented. A high level summary of this function is, it uses the functions from the "monday-service.js" file to query the value from the Person column selected. 
+2. In the "integration-controller.js" file, I added the new async function "populateTextColumnFromPeopleColumn," and also inserted internal notes walking through each line of code that was implemented. A high level summary of this function is, it uses the functions from the "monday-service.js" file to query the value from the Person column selected. 
 
 The function then separates the value of this column, transforms the data from a JSON string to a JSON object, so that we can create a list of user IDs. This list of user IDs is then fed into the "getUserEmail" async function from the "monday-service.js" file to generate a list of user emails associated with those user IDs. 
 
@@ -110,6 +110,6 @@ This list of user emails is transformed back into a JSON string type (making sur
 
 Finally, this list of JSON strings is pushed back into the Text column selected by the user in the integration recipe using the "changeColumnValue" function in the "monday-service.js" file. 
 
-In the "integration-routes.js" file, I created a new router post method that establishes a new URL address that the user can paste into their custom integration recipe to establish an endpoint URL for their transformed data!
+3. In the "integration-routes.js" file, I created a new router post method that establishes a new URL address that the user can paste into their custom integration recipe to establish an endpoint URL for their transformed data!
 
 
