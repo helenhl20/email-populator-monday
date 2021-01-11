@@ -94,11 +94,11 @@ If you want to actively change the server-side code and restart the server (as w
 3. Add and remove users from your selected Person column, and in a few moments the Text column selected will be updated with the user's email
 4. Enjoy your custom integration recipe!
 
-### How This Custom Integration Works
+## How This Custom Integration Works
 
 The changes to this custom integration starter code file are in the "integration_routes.js" file, the "monday-service.js" file, as well as the "integration-controller.js" files. Let's go through them one by one! 
 
-## File Changes
+### File Changes
 
 In the "monday-service.js" file, I added the new async function "getUserEmail." This function queries a user's email data based off of their user ID. Keep in mind, this async function only runs once, and is only able to retrieve the first user's email from the query. 
 
