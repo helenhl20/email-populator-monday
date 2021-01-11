@@ -13,17 +13,14 @@ This is Helen's "Quickstart Integration" example custom integration monday.com a
 1. Make sure you have Node (v10+) and npm installed
 
 2. Use the correct node version:
-
 ```
 $ nvm use
 ```
-
-<br>
 3. Run node modules install:
-
 ```
 $ npm install
 ```
+4. You can then either download this Github file manually, or you can clone it onto your local system for editing!
 
 ## Configure Your monday.com Custom App
 
@@ -96,3 +93,9 @@ If you want to actively change the server-side code and restart the server (as w
 2. Choose your source and target columns in your custom integration recipe
 3. Add and remove users from your selected Person column, and in a few moments the Text column selected will be updated with the user's email
 4. Enjoy your custom integration recipe!
+
+### How This Custom Integration Works
+
+<br>The changes to this custom integration starter code file are in the "transformation.js" file, the "mondayservice.js" file, as well as the "integration-controller.js" files. 
+
+
