@@ -40,7 +40,7 @@ $ npm install
 5. Configure the trigger input fields as follows:
    <br>boardId - Context
    <br>columnId - Recipe Sentence (Person Column)
-   <br> ![Screenshot](/images/trigger_selections.png)
+   <br>![Screenshot](/images/trigger_selections.png)
 
 ### Create a new custom action
 
@@ -55,6 +55,7 @@ $ npm install
    <br>Column - sourceColumnId
    <br>Column - targetColumnId
    <br> ![Screenshot](/images/custom_action_selections.png)
+   
 6. Click "Create action"
 
 ### Configure Your Custom Action
@@ -67,7 +68,8 @@ $ npm install
    <br>sourceColumnId - Trigger Output (columnId)
    <br>targetColumnId - Recipe Sentence (Text column type)
    <br> ![Screenshot](/images/action_selections.png)
-   4.Click "Create Recipe" button
+   
+4. Click the "Create Recipe" button
 
 ## Run the project
 
@@ -81,9 +83,9 @@ $ npm install
 ```
 $ npm start
 ```
-3. Open http://localhost:4040/status to get your ngrok public url
+4. Open http://localhost:4040/status to get your ngrok public url
 
-4. Open up your custom action "Populate email" again to update the {NGROK_URL} part in "Run URL" field with the ngrok public url from the localhost4040/status page
+5. Open up your custom action "Populate email" again to update the {NGROK_URL} part in "Run URL" field with the ngrok public url from the localhost4040/status page
 <br>\*\* Note that on every restart of the server, your ngrok url will change, so you need to change "Run URL" field in the action.
 If you want to actively change the server-side code and restart the server (as well as debug your program), you can run `npm run server` and `npm run expose` in 2 different terminal windows
 
@@ -103,12 +105,9 @@ The changes to this custom integration starter code file are in the "integration
 1. In the "monday-service.js" file, I added the new async function "getUserEmail." This function queries a user's email data based off of their user ID. Keep in mind, this async function only runs once, and is only able to retrieve the first user's email from the query. 
 
 2. In the "integration-controller.js" file, I added the new async function "populateTextColumnFromPeopleColumn," and also inserted internal notes walking through each line of code that was implemented. A high level summary of this function is, it uses the functions from the "monday-service.js" file to query the value from the Person column selected. 
-
-The function then separates the value of this column, transforms the data from a JSON string to a JSON object, so that we can create a list of user IDs. This list of user IDs is then fed into the "getUserEmail" async function from the "monday-service.js" file to generate a list of user emails associated with those user IDs. 
-
-This list of user emails is transformed back into a JSON string type (making sure to separate each email by a space, then a semicolon, then another space to fulfill the Text column requirements for storing multiple emails). 
-
-Finally, this list of JSON strings is pushed back into the Text column selected by the user in the integration recipe using the "changeColumnValue" function in the "monday-service.js" file. 
+   <br>The function then separates the value of this column, transforms the data from a JSON string to a JSON object, so that we can create a list of user IDs. This list of user IDs is then fed into the "getUserEmail" async function from the "monday-service.js" file to generate a list of user emails associated with those user IDs. 
+   <br>This list of user emails is transformed back into a JSON string type (making sure to separate each email by a space, then a semicolon, then another space to fulfill the Text column requirements for storing multiple emails). 
+   <br>Finally, this list of JSON strings is pushed back into the Text column selected by the user in the integration recipe using the "changeColumnValue" function in the "monday-service.js" file. 
 
 3. In the "integration-routes.js" file, I created a new router post method that establishes a new URL address that the user can paste into their custom integration recipe to establish an endpoint URL for their transformed data!
 
