@@ -43,7 +43,7 @@ $ npm install
 5. Configure the trigger input fields as follows:
    <br>boardId - Context
    <br>columnId - Recipe Sentence (Person Column)
-   <br> ![Screenshot](/images/action_selections.png)
+   <br> ![Screenshot](/images/trigger_selections.png)
 
 ### Create a new custom action
 
@@ -69,7 +69,7 @@ $ npm install
    <br>itemId - Trigger Output (itemId)
    <br>sourceColumnId - Trigger Output (columnId)
    <br>targetColumnId - Recipe Sentence (Text column type)
-   <br> ![Screenshot](/images/trigger_selections.png)
+   <br> ![Screenshot](/images/action_selections.png)
    4.Click "Create Recipe" button
 
 ## Run the project
@@ -79,7 +79,7 @@ $ npm install
    <br> ![Screenshot](https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/VladMystetskyi/4db4f03e-67a5-482d-893e-033db67ee09b_monday-Apps2020-05-1901-31-26.png)
 2. Add your API key to the API_TOKEN field in the .env file
   <br> \*\* To get your API_TOKEN go to your admin section in your monday.com account, open the API tab, and copy-paste your token in the relevant section
-  <br> ![Screenshot]
+  <br> ![Screenshot](/images/API_token.png) 
 3. Run the server with ngrok tunnel with the following command:
 ```
 $ npm start
