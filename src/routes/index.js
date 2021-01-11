@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const transformationRoutes = require('./transformation');
+const transformationRoutes = require('./integration-routes');
 
 router.use(transformationRoutes);
 router.get('/', function(req, res) {
