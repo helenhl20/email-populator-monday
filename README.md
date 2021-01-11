@@ -1,18 +1,12 @@
 ## Overview
 
-This is the "Quickstart Integration" example Monday app.
-<br>It can be used as a board recipe, which transforms data from one text column to another
+This is Helen's "Quickstart Integration" example Monday app.
 
-<br>This app demonstrates how to use:
+<br>It can be used as a board recipe, which inserts a user's email address into a Text column when said user is selected (or unselected) from a Person column. 
 
-- integration recipe
-- custom action
-- call authentication with JWT
-- API
-- remote options for custom fields
-
-<br>You can find more info in our QuickStart guide [here](https://monday.com/developers/apps/quickstart-integration/)
-<br>![Screenshot](https://dapulse-res.cloudinary.com/image/upload/f_mp4,f_auto/remote_mondaycom_static/uploads/VladMystetskyi/c3be2380-c5a5-4a4f-bbe6-305ba3bea620_screencast2020-05-1910-49-37.gif)
+<br>This app demonstrates how to build:
+- a custom integration recipe
+- a custom action
 
 ## Install
 
@@ -33,21 +27,22 @@ $ npm install
 
 ## Configure Monday App
 
-### Create new app and integration feature
+### Create a new app and an integration feature
 
-1. Open monday.com, login to your account and go to a "Developers" section.
-2. Create new "Integration Example App"
-3. Open "Features" section and create new "Integration" feature
+1. Open monday.com, login into your account, and go to your "Developers" section.
+2. Create a new "Integration Example App"
+3. Open the "Features" section and create a new "Integration" feature
 
-### Create new recipe and trigger
+### Create a new recipe and a custom trigger
 
 1. Open "Recipes" tab
 2. Click "Add new recipe"
 3. Click "Choose trigger" and choose "When a column changes" trigger
-4. Type "When {text column, columnId} changes" in "Sentence" field
-5. Configure trigger input fields:
+4. Type "When {Person column, columnId} changes" in the "Sentence" field
+   <br>(In this case, the "Person column" will be the underlined part of the recipe you will be clicking into, and the "columnId" will be the data that is sent to your custom app. 
+5. Configure the following trigger input fields:
    <br>boardId - Context
-   <br>columnId - Recipe Sentence (Text Column)
+   <br>columnId - Recipe Sentence (Person Column)
    <br> ![Screenshot](https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/VladMystetskyi/7ca206bf-d494-43f3-bd62-439061d6ec13_monday-Apps2020-06-0722-35-56.png)
 
 ### Create new custom action
