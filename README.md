@@ -76,7 +76,7 @@ $ npm install
 
 1. Add your MONDAY_SIGNING_SECRET to the relevant field in the .env file
    <br> \*\* To get your MONDAY_SIGNING_SECRET go to monday.com, open Developers section, open your app and find the Signing Secret in "Basic Information" section
-   <br> ![Screenshot](images/signing_secret)
+   <br> ![Screenshot](/images/signing_secret)
 2. Add your API key to the API_TOKEN field in the .env file
   <br> \*\* To get your API_TOKEN go to your admin section in your monday.com account, open the API tab, and copy-paste your token in the relevant section
   <br> ![Screenshot](/images/API_token.png) 
@@ -92,7 +92,7 @@ If you want to actively change the server-side code and restart the server (as w
 
 ## Add your recipe to a board
 
-1. Go to any board at monday.com (it should have at least 2 text columns) and add your new integration recipe to it
-2. Configure your source and target columns in your recipe
-3. Add and remove users from your Person column selected in the source column, and in a few moments the Text column selected will be updated with the transformed text
-4. Enjoy your recipe!
+1. Go to any board on your monday.com account (it should have at least one Person column and one Text columns) and add your new, custom integration recipe to it
+2. Choose your source and target columns in your custom integration recipe
+3. Add and remove users from your selected Person column, and in a few moments the Text column selected will be updated with the user's email
+4. Enjoy your custom integration recipe!
