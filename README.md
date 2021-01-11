@@ -61,7 +61,7 @@ $ npm install
 ### Configure Your Custom Action
 
 1. Choose your custom action in the recipe
-2. Type “transform to {Text column, targetColumnId}” in the "Sentence" field
+2. Type “update {Text column, targetColumnId}” in the "Sentence" field
 3. Configure the action input fields as follows:
    <br>boardId - Trigger Output (boardId)
    <br>itemId - Trigger Output (itemId)
