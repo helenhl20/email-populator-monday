@@ -47,7 +47,7 @@ $ npm install
 1. Click "Choose action"
 2. Click "Create new action"
 3. Name your action "Populate email"
-4. Type in the "Run URL" field: https://{NGROK_URL}/transformation/transform (make sure it's https: and not http:). 
+4. Type in the "Run URL" field: https://{NGROK_URL}/transformation/email (make sure it's https: and not http:). 
    <br> \*\* we will update the {NGROK_URL} placeholder later when we will bring up our local server. 
 5. Add the following input fields that our action will need in order to run:
    <br>Board - boardId
