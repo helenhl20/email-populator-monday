@@ -76,7 +76,7 @@ $ npm install
 
 1. Add your MONDAY_SIGNING_SECRET to the relevant field in the .env file
    <br> \*\* To get your MONDAY_SIGNING_SECRET go to monday.com, open Developers section, open your app and find the Signing Secret in "Basic Information" section
-   <br> ![Screenshot](/images/signing_secret)
+   <br> ![Screenshot](/images/signing_secret.png)
 2. Add your API key to the API_TOKEN field in the .env file
   <br> \*\* To get your API_TOKEN go to your admin section in your monday.com account, open the API tab, and copy-paste your token in the relevant section
   <br> ![Screenshot](/images/API_token.png) 
