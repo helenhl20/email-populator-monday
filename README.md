@@ -43,7 +43,7 @@ $ npm install
 5. Configure the trigger input fields as follows:
    <br>boardId - Context
    <br>columnId - Recipe Sentence (Person Column)
-   <br> ![Screenshot](https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/VladMystetskyi/7ca206bf-d494-43f3-bd62-439061d6ec13_monday-Apps2020-06-0722-35-56.png)
+   <br> ![Screenshot](/images/action_selections.png)
 
 ### Create a new custom action
 
@@ -57,7 +57,7 @@ $ npm install
    <br>Item - itemId
    <br>Column - sourceColumnId
    <br>Column - targetColumnId
-   <br> ![Screenshot](https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/BenRosenfeld/a459fe3d-0242-4eae-bd26-8a4029a81acb_ScreenShot2020-05-18at21.10.51.png)
+   <br> ![Screenshot](/images/custom_action_selections.png)
 6. Click "Create action"
 
 ### Configure your custom action in the recipe
@@ -69,7 +69,7 @@ $ npm install
    <br>itemId - Trigger Output (itemId)
    <br>sourceColumnId - Trigger Output (columnId)
    <br>targetColumnId - Recipe Sentence (Text column type)
-   <br> ![Screenshot](https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/uploads/VladMystetskyi/fdd30a2e-7ce0-4e04-844c-b1b7657fd4b4_screencast2020-05-1901-19-15.gif)
+   <br> ![Screenshot](/images/trigger_selections.png)
    4.Click "Create Recipe" button
 
 ## Run the project
