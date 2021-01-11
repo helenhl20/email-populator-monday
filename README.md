@@ -35,8 +35,10 @@ $ npm install
 1. Open the "Recipes" tab
 2. Click "Add new recipe"
 3. Click "Choose trigger" and choose "When a column changes" trigger
+
 4. Type "When {Person column, columnId} changes" in the "Sentence" field
    <br>(In this case, the "Person column" will be the underlined part of the recipe you will be clicking into, and the "columnId" will be the data that is sent to your custom app.)
+   
 5. Configure the trigger input fields as follows:
    <br>boardId - Context
    <br>columnId - Recipe Sentence (Person Column)
@@ -47,8 +49,10 @@ $ npm install
 1. Click "Choose action"
 2. Click "Create new action"
 3. Name your action "Populate email"
+
 4. Type in the "Run URL" field: https://{NGROK_URL}/transformation/email (make sure it's https: and not http:). 
    <br> \*\* we will update the {NGROK_URL} placeholder later when we will bring up our local server. 
+   
 5. Add the following input fields that our action will need in order to run:
    <br>Board - boardId
    <br>Item - itemId
@@ -62,6 +66,7 @@ $ npm install
 
 1. Choose your custom action in the recipe
 2. Type “update {Text column, targetColumnId}” in the "Sentence" field
+
 3. Configure the action input fields as follows:
    <br>boardId - Trigger Output (boardId)
    <br>itemId - Trigger Output (itemId)
@@ -76,9 +81,11 @@ $ npm install
 1. Add your MONDAY_SIGNING_SECRET to the relevant field in the .env file
    <br> \*\* To get your MONDAY_SIGNING_SECRET go to monday.com, open Developers section, open your app and find the Signing Secret in "Basic Information" section
    <br> ![Screenshot](/images/signing_secret.png)
+   
 2. Add your API key to the API_TOKEN field in the .env file
   <br> \*\* To get your API_TOKEN go to your admin section in your monday.com account, open the API tab, and copy-paste your token in the relevant section
   <br> ![Screenshot](/images/API_token.png) 
+  
 3. Run the server with ngrok tunnel with the following command:
 ```
 $ npm start
@@ -105,8 +112,11 @@ The changes to this custom integration starter code file are in the "integration
 1. In the "monday-service.js" file, I added the new async function "getUserEmail." This function queries a user's email data based off of their user ID. Keep in mind, this async function only runs once, and is only able to retrieve the first user's email from the query. 
 
 2. In the "integration-controller.js" file, I added the new async function "populateTextColumnFromPeopleColumn," and also inserted internal notes walking through each line of code that was implemented. A high level summary of this function is, it uses the functions from the "monday-service.js" file to query the value from the Person column selected. 
+
    <br>The function then separates the value of this column, transforms the data from a JSON string to a JSON object, so that we can create a list of user IDs. This list of user IDs is then fed into the "getUserEmail" async function from the "monday-service.js" file to generate a list of user emails associated with those user IDs. 
+   
    <br>This list of user emails is transformed back into a JSON string type (making sure to separate each email by a space, then a semicolon, then another space to fulfill the Text column requirements for storing multiple emails). 
+   
    <br>Finally, this list of JSON strings is pushed back into the Text column selected by the user in the integration recipe using the "changeColumnValue" function in the "monday-service.js" file. 
 
 3. In the "integration-routes.js" file, I created a new router post method that establishes a new URL address that the user can paste into their custom integration recipe to establish an endpoint URL for their transformed data!
