@@ -1,3 +1,4 @@
+const { response } = require('express');
 const initMondayClient = require('monday-sdk-js');
 
 class MondayService {
@@ -25,7 +26,6 @@ class MondayService {
   static async changeColumnValue(token, boardId, itemId, columnId, value) {
     try {
       const mondayClient = initMondayClient({ token });
-
       const query = `mutation change_column_value($boardId: Int!, $itemId: Int!, $columnId: String!, $value: JSON!) {
         change_column_value(board_id: $boardId, item_id: $itemId, column_id: $columnId, value: $value) {
           id
@@ -56,6 +56,7 @@ class MondayService {
       console.log(err);
     }
   }
+
 }
 
 module.exports = MondayService;
